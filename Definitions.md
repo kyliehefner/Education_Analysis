@@ -1,6 +1,6 @@
 # Column Definitions
 
-## EdStatsData
+## EdStatsData / indicators_df
 ### Indicator measurements by country and year (69 columns, 886,930 rows)
 
 Country Name: Same as EdStatsCountry Table Name (foreign key)
@@ -14,7 +14,7 @@ Indicator Code: Same as EdStatsSeries Series Code (foreign key)
 Years columns: 1950 - 2017 (actual numbers), then 2020 - 2100 by 5s (projected)
 Year columns are 73-96% null (1990: 86%, 1995: 85%, 2000: 80%, 2005: 79%, 2010: 73%)
 
-## EdStatsSeries
+## EdStatsSeries / series_df
 ### Information about each of the 3,665 indicators (20 columns, 3,665 rows)
 
 **Series Code: all unique, primary key**
@@ -35,7 +35,7 @@ Statistical concept and methodology: 99% null, but includes "TIMSS"
 
 The last 3 columns are all null
 
-## EdStatsCountry
+## EdStatsCountry / country_df
 ### Information about each of the 241 countries (31 columns, 241 rows)
 
 **Short Name/Table Name/Long Name: Country name (primary key)**
@@ -52,7 +52,7 @@ Income Group: Low income, Lower middle income, Upper middle income, High income:
 
 21 other categories
 
-## EdStatsCountry-Series
+## EdStatsCountry-Series / country_series_df
 ### Which series codes we have for each country (3 columns, 613 rows)
 
 CountryCode: 3-letter code for country (foreign key)
@@ -66,7 +66,7 @@ SeriesCode: (foreign key)
 
 DESCRIPTION: Where the seriescode data comes from
 
-## EdStatsFootNote
+## EdStatsFootNote / footnote_df
 ### Glossary for country, seriescode, and years (4 columns, 643,638 rows)
 
 Country code: 239 unique (all but 2 countries) (foreign key)
